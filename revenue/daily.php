@@ -348,7 +348,7 @@ include "../api/index.php";
                                                 <label class="control-label col-md-3">Vehicle Registration
                                                     <span class="required"> * </span>
                                                 </label>
-                                                <input class="col-md-4">
+                                                <input class="col-md-4" type="text" v-model="regNo" >
                                                 <input name="occupation" type="text" class="form-control"  v-model="regNo">
                                             </div>
                                         </div>

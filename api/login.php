@@ -13,7 +13,7 @@ include 'helpers/fpdf/fpdf.php';
 
 
 session_start();
-if(isset($_SESSION["email"])){
+if(isset($_SESSION["PhoneNumber"])){
     session_destroy();
 }
 $phonenumber= $_POST['phonenumber'];
@@ -28,23 +28,28 @@ $result=DB::instance()->executeSQL($sql);
 $count=mysqli_num_rows($result);
 if($count==1){
     while($row = mysqli_fetch_array($result)) {
-        $phonenumber = $row['PhoneNumber'];
+        $phonenumber = $row['IDNO_PASSNO'];
+        $branch=$row['branch'];
     }
     $_SESSION["PhoneNumber"] = $phonenumber;
+    $_SESSION["branch"]= $branch;
+
     $cookie_name = "user";
     $cookie_value = $phonenumber;
     setcookie($cookie_name, $cookie_value, time() + (86400), "/"); // 86400 = 1 day);
 
     if(!isset($_COOKIE[$cookie_name])) {
-        echo "<script type='text/javascript'>document.location='http://revenuesure.nouveta.co.ke'</script>";
-        } else {
+        echo "<script type='text/javascript'>document.location='https://localhost/revenuesure/revenue'</script>";
+        echo $_COOKIE[$cookie_name];
+    } else {
 
-        echo  "<script type='text/javascript'>document.location='/Portal'</script>";
+        echo  "<script type='text/javascript'>document.location='http://localhost/revenuesure/revenue'</script>";
+        echo $_COOKIE[$cookie_name];
     }
     //header("location:http://revenuesure.nouveta.co.ke/Portal/");
 }
 else{
-    $message = "phonenumber and/or Password incorrect.\\nTry again.";
-    echo "<script type='text/javascript'>alert('$message');document.location='http://local'</script>";
+    $message = "The password enter did not match .\\nTry again.";
+    echo "<script type='text/javascript'>alert('$message');document.location='https://revenuesure.ticketsoko.com'</script>";
 
 }

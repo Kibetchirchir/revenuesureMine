@@ -290,33 +290,61 @@ if(isset($_SESSION["PhoneNumber"])){
                     <div class="page-bar">
                         <div class="page-title-breadcrumb">
                             <div class=" pull-left">
-                                <div class="page-title">Business Permit Renewal </div>
+                                <div class="page-title">Daily Parking Topup </div>
                             </div>
                             <ol class="breadcrumb page-breadcrumb pull-right">
                                 <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
                                 </li>
-                                <li class="active">Renew Business permit</li>
+                                <li class="active">Topup</li>
                             </ol>
                         </div>
                     </div>
 
 
-                    <div class="col-md-9 col-sm-9">
-                        <div class="card card-box">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="card card-box">
 
-                            <div class="card-body " id="bar-parent">
-                                <form>
-                                    <div class="form-group">
-                                        <label for="simpleFormEmail">Business ID</label>
-                                        <input type="text" class="form-control" id="simpleFormEmail" placeholder="Enter business ID">
-                                    </div>
+                                <div class="card-body" id="bar-parent1">
+                                    <form action="#" id="form_sample_1" class="form-horizontal">
+                                        <div class="form-body">
+                                          <div class="form-group row">
+                                              <label class="control-label col-md-3">Select zone
+                                                  <span class="required"> * </span>
+                                              </label>
+                                              <div class="col-md-4">
+                                                  <select class="form-control" name="select">
+                                                      <option value="">Select...</option>
+                                                      <option value="Category 1">Zone 1</option>
+                                                      <option value="Category 2">Zone 2</option>
+                                                      <option value="Category 3">Zone 3</option>
+                                                      <option value="Category 4">Zone 4</option>
+                                                      <option value="Category 5">Zone 5</option>
+                                                      <option value="Category 6">Zone 6</option>
+                                                  </select>
+                                              </div>
+                                          </div>
 
-                                    <div class="form-group">
 
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">PRint receipt</button>
-                                    <button type="submit" class="btn btn-primary">Reset</button>
-                                </form>
+                                            <div class="form-group row">
+                                                <label class="control-label col-md-3">Vehicle Registration
+                                                    <span class="required"> * </span>
+                                                </label>
+                                                <div class="col-md-4">
+                                                    <input name="occupation" type="text" class="form-control" />
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                      <div class="form-group">
+                                            <div class="offset-md-3 col-md-9">
+                                                <button type="submit" class="btn btn-info">Submit</button>
+
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>

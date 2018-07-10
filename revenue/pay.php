@@ -1,3 +1,14 @@
+<?php
+
+include "../api/index.php";
+session_start();
+if(isset($_SESSION["PhoneNumber"])){
+    echo "ok";
+}else
+{
+    echo "<script type='text/javascript'>document.location='http://localhost/revenuesure/'</script>";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <!-- BEGIN HEAD -->
@@ -40,7 +51,7 @@
         <div class="page-header-inner ">
             <!-- logo start -->
             <div class="page-logo">
-                <a href="index.html">
+                <a href="index.php">
 
                     <span class="logo-default" >RevenueSure</span> </a>
             </div>
@@ -67,38 +78,33 @@
             <div class="top-menu">
                 <ul class="nav navbar-nav pull-right">
                     <!-- start language menu -->
+                    <li style="padding-top:10px">
+                        <a href="transactions.html"><button type="button" >Your Transactions</button></a>
+                    </li>
 
 
                     <!-- start manage user dropdown -->
                     <li class="dropdown dropdown-user">
                         <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                            <img alt="" class="img-circle " src="assets/img/dp.jpg" />
-                            <span class="username username-hide-on-mobile"> Kitty </span>
+                                <span class="username username-hide-on-mobile"> <?php
+                                    session_start();
+                                    echo $_SESSION["PhoneNumber"];
+
+                                    ?></span>
                             <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-default animated jello">
-                            <li>
-                                <a href="user_profile.html">
-                                    <i class="icon-user"></i> Profile </a>
-                            </li>
+
                             <li>
                                 <a href="#">
                                     <i class="icon-settings"></i> Settings
                                 </a>
                             </li>
-                            <li>
-                                <a href="#">
-                                    <i class="icon-directions"></i> Help
-                                </a>
-                            </li>
+
                             <li class="divider"> </li>
+
                             <li>
-                                <a href="lock_screen.html">
-                                    <i class="icon-lock"></i> Lock
-                                </a>
-                            </li>
-                            <li>
-                                <a href="login.html">
+                                <a href="../index.html">
                                     <i class="icon-logout"></i> Log Out </a>
                             </li>
                         </ul>
@@ -122,19 +128,20 @@
                             <div class="sidebar-toggler">
                                 <span></span>
                             </div>
+                        </li>
                         <li class="sidebar-user-panel">
                             <div class="user-panel">
                                 <div class="pull-left image">
-                                    <img src="assets/img/county.png" class="img-circle user-img-circle" alt="User Image" />
+                                    <img src="assets/img/kakamega.jpeg" class="img-circle user-img-circle" alt="User Image" />
                                 </div>
                                 <div class="pull-left info">
-                                    <p> Meru</p>
+                                    <p>Kakamega</p>
                                     <a href="#"><i class="fa fa-circle user-online"></i><span class="txtOnline"> County</span></a>
                                 </div>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link nav-toggle"> <i class="material-icons">event</i>
+                            <a href="index.php" class="nav-link nav-toggle"> <i class="material-icons">event</i>
                                 <span class="title">Dashboard</span>
                             </a>
                         </li>
@@ -146,22 +153,22 @@
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item   ">
-                                    <a href="renew.html" class="nav-link ">
+                                    <a href="renew.php" class="nav-link ">
                                         <span class="title">Renew</span>
                                     </a>
                                 </li>
                                 <li class="nav-item ">
-                                    <a href="register.html" class="nav-link ">
+                                    <a href="register.php" class="nav-link ">
                                         <span class="title">Register</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="permit.html" class="nav-link ">
+                                    <a href="permit.php" class="nav-link ">
                                         <span class="title">Permit</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="receipt.html" class="nav-link ">
+                                    <a href="receipt.php" class="nav-link ">
                                         <span class="title">Receipt</span>
                                     </a>
                                 </li>
@@ -175,13 +182,13 @@
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item   ">
-                                    <a href="pay.html" class="nav-link ">
+                                    <a href="pay.php" class="nav-link ">
                                         <span class="title">Pay</span>
                                     </a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="lrr.html" class="nav-link ">
+                                    <a href="lrr.php" class="nav-link ">
                                         <span class="title">Receipt</span>
                                     </a>
                                 </li>
@@ -195,18 +202,18 @@
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item   ">
-                                    <a href="house.html" class="nav-link ">
+                                    <a href="house.php" class="nav-link ">
                                         <span class="title">Houses</span>
                                     </a>
                                 </li>
                                 <li class="nav-item ">
-                                    <a href="stalls.html" class="nav-link ">
+                                    <a href="stalls.php" class="nav-link ">
                                         <span class="title">Stalls</span>
                                     </a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="rr.html" class="nav-link ">
+                                    <a href="rr.php" class="nav-link ">
                                         <span class="title">Receipt</span>
                                     </a>
                                 </li>
@@ -220,27 +227,28 @@
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item   ">
-                                    <a href="daily.html" class="nav-link ">
+                                    <a href="daily.php" class="nav-link ">
                                         <span class="title">Daily</span>
                                     </a>
                                 </li>
+
                                 <li class="nav-item">
-                                    <a href="penalties.html" class="nav-link ">
+                                    <a href="penalties.php" class="nav-link ">
                                         <span class="title">Penalties</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="seasonal.html" class="nav-link ">
+                                    <a href="seasonal.php" class="nav-link ">
                                         <span class="title">Seasonal</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="print.html" class="nav-link ">
+                                    <a href="print.php" class="nav-link ">
                                         <span class="title">Print Receipt</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="clamp.html" class="nav-link ">
+                                    <a href="clamp.php" class="nav-link ">
                                         <span class="title">Clamping Receipt</span>
                                     </a>
                                 </li>
@@ -254,18 +262,18 @@
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item   ">
-                                    <a href="top.html" class="nav-link ">
+                                    <a href="top.php" class="nav-link ">
                                         <span class="title">Hospital</span>
                                     </a>
                                 </li>
                                 <li class="nav-item ">
-                                    <a href="balance.html" class="nav-link ">
-                                        <span class="title">Electricity</span>
+                                    <a href="balance.php" class="nav-link ">
+                                        <span class="title">Water</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="statement.html" class="nav-link ">
-                                        <span class="title">Water</span>
+                                    <a href="statement.php" class="nav-link ">
+                                        <span class="title">Electricity</span>
                                     </a>
                                 </li>
 

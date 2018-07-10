@@ -1,4 +1,5 @@
 <?php
+session_start();
 
  include 'includes/DB.php';
  include 'helpers/Response.php';
@@ -570,9 +571,12 @@ if($function=='Bpnew'){
        $payBill='175555';
        $phonenumber=formatPhoneNumber($_REQUEST['phonenumber']);
        $ParkingFee=ParkingDailyFee();
+       $branch=$_SESSION["branch"];
+       $id=$_SESSION["PhoneNumber"];
 
-       $sql = "INSERT INTO `payments`(`Transaction_code`, `Amount`,`RevID`) 
-              VALUES ('$Transaction_code','$Amount','$RevID')";
+
+       $sql = "INSERT INTO `payments`(`Transaction_code`, `Amount`,`RevID`,`branch`,`ID`) 
+              VALUES ('$Transaction_code','$Amount','$RevID','$branch','$id')";
        $result2 = DB::instance()->executeSQL($sql);
        $sql = "INSERT INTO `parking`(`ParkingFee`, `Subscription`, `RegNo`, `parking_place`, `Transaction_code`) 
                                 VALUES ('$ParkingFee','$Subscription','$RegNo','$parking_place','$Transaction_code')";

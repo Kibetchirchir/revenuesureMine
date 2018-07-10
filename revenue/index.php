@@ -77,7 +77,7 @@ if(isset($_SESSION["PhoneNumber"])){
                     <ul class="nav navbar-nav pull-right">
                     	<!-- start language menu -->
                       <li style="padding-top:10px">
-                      <a href="transactions.html"><button type="button" >Your Transactions</button></a>
+                      <a href="transactions.php"><button type="button" >Your Transactions</button></a>
                       </li>
 
 
@@ -293,7 +293,7 @@ if(isset($_SESSION["PhoneNumber"])){
                                 <div class="page-title">RevenueSure</div>
                             </div>
                             <ol class="breadcrumb page-breadcrumb pull-right">
-                                <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
+                                <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index.php">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
                                 </li>
                                 <li><a class="parent-item" href="">Apps</a>&nbsp;<i class="fa fa-angle-right"></i>
                                 </li>
@@ -364,9 +364,9 @@ if(isset($_SESSION["PhoneNumber"])){
 
 				                                                <div><p><i class="fa fa-phone"></i><a href="tel:(123)456-7890">  (123)456-7890</a></p> </div>
 					                                        <div class="profile-userbuttons">
-					                                             <a href="house.html" class="btn btn-circle deepPink-bgcolor btn-sm">Houses</a>
-                                                        <a href="stalls.html" class="btn btn-circle deepPink-bgcolor btn-sm">Stalls</a>
-                                                         <a href="rr.html" class="btn btn-circle deepPink-bgcolor btn-sm">Receipt</a>
+					                                             <a href="house.php" class="btn btn-circle deepPink-bgcolor btn-sm">Houses</a>
+                                                        <a href="stalls.php" class="btn btn-circle deepPink-bgcolor btn-sm">Stalls</a>
+                                                         <a href="rr.php" class="btn btn-circle deepPink-bgcolor btn-sm">Receipt</a>
 					                                        </div>
 				                                        </div>
 				                                    </div>
@@ -385,14 +385,14 @@ if(isset($_SESSION["PhoneNumber"])){
 
 				                                                <div><p><i class="fa fa-phone"></i><a href="tel:(123)456-7890">  (123)456-7890</a></p> </div>
 					                                        <div class="profile-userbuttons">
-					                                             <a href="daily.html" class="btn btn-circle deepPink-bgcolor btn-sm">Daily</a>
-                                                       <a href="penalties.html" class="btn btn-circle deepPink-bgcolor btn-sm">Penalties</a>
-                                                       <a href="seasonal.html" class="btn btn-circle deepPink-bgcolor btn-sm">Seasonal</a><br>
+					                                             <a href="daily.php" class="btn btn-circle deepPink-bgcolor btn-sm">Daily</a>
+                                                       <a href="penalties.php" class="btn btn-circle deepPink-bgcolor btn-sm">Penalties</a>
+                                                       <a href="seasonal.php" class="btn btn-circle deepPink-bgcolor btn-sm">Seasonal</a><br>
 
 					                                        </div>
                                                   <div class="profile-userbuttons">
-                                                  <a href="print.html" class="btn btn-circle deepPink-bgcolor btn-sm">Print Receipt</a>
-                                                  <a href="clamp.html" class="btn btn-circle deepPink-bgcolor btn-sm">Clamping Receipt</a>
+                                                  <a href="print.php" class="btn btn-circle deepPink-bgcolor btn-sm">Print Receipt</a>
+                                                  <a href="clamp.php" class="btn btn-circle deepPink-bgcolor btn-sm">Clamping Receipt</a>
                                                 </div>
 				                                        </div>
 				                                    </div>
@@ -409,9 +409,9 @@ if(isset($_SESSION["PhoneNumber"])){
 
 				                                                <div><p><i class="fa fa-phone"></i><a href="tel:(123)456-7890">  (123)456-7890</a></p> </div>
 					                                        <div class="profile-userbuttons">
-					                                             <a href="top.html" class="btn btn-circle deepPink-bgcolor btn-sm">Hospital</a>
-                                                       <a href="balance.html" class="btn btn-circle deepPink-bgcolor btn-sm">Water</a>
-                                                       <a href="statement.html" class="btn btn-circle deepPink-bgcolor btn-sm">Electri</a>
+					                                             <a href="top.php" class="btn btn-circle deepPink-bgcolor btn-sm">Hospital</a>
+                                                       <a href="balance.php" class="btn btn-circle deepPink-bgcolor btn-sm">Water</a>
+                                                       <a href="statement.php" class="btn btn-circle deepPink-bgcolor btn-sm">Electri</a>
 					                                        </div>
 				                                        </div>
 				                                    </div>

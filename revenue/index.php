@@ -293,133 +293,150 @@ if(isset($_SESSION["PhoneNumber"])){
                                 <div class="page-title">RevenueSure</div>
                             </div>
                             <ol class="breadcrumb page-breadcrumb pull-right">
-                                <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index.php">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
+                                <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
                                 </li>
                                 <li><a class="parent-item" href="">Apps</a>&nbsp;<i class="fa fa-angle-right"></i>
                                 </li>
-                                <li class="active">CountyServices</li>
+                                <li class="active">County Services</li>
                             </ol>
                         </div>
                     </div>
-                     <div class="row">
+                    <div class="row">
                         <div class="col-sm-12">
                             <div class="card ">
                                 <div class="card-head">
-                                    <header>Self service portal</header>
+                                    <header>County service portal</header>
                                     <div class="tools">
                                         <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
-										<a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
-										<a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                        <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                        <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
                                     </div>
                                 </div>
                                 <div class="card-body ">
-                                	<div class="row">
-					                        <div class="col-md-4">
-				                                <div class="card card-box">
-				                                    <div class="card-body no-padding ">
-				                                    	<div class="doctor-profile">
-				                                                <img src="assets/img/user/usrbig10.jpg" class="doctor-pic" alt="">
-					                                        <div class="profile-usertitle">
-					                                            <div class="doctor-name">Unified Business Permit</div>
-					                                        </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="card card-box">
+                                                <div class="card-body no-padding ">
+                                                    <div class="doctor-profile">
+                                                        <img src="assets/img/user/usrbig10.jpg" class="doctor-pic" alt="">
+                                                        <div class="profile-usertitle">
+                                                            <div class="doctor-name">Unified Business Permit</div>
+                                                        </div>
 
-				                                                <div><p><i class="fa fa-phone"></i><a href="tel:(123)456-7890">  (123)456-7890</a></p> </div>
-					                                        <div class="profile-userbuttons">
+                                                        <div><p><i class="fa fa-phone"></i><a href="tel:(+254)456-7890">  (+254)456-7890</a></p> </div>
+                                                        <div class="profile-userbuttons">
 
-					                                            <a href="renew.php" class="btn btn-circle deepPink-bgcolor btn-sm">Renew</a>
-                                                      <a href="register.php" class="btn btn-circle deepPink-bgcolor btn-sm">Register</a>
-                                                      <a href="permit.php" class="btn btn-circle deepPink-bgcolor btn-sm">Permit</a>
-                                                      <a href="receipt.php" class="btn btn-circle deepPink-bgcolor btn-sm">Receipt</a>
-					                                        </div>
-				                                        </div>
-				                                    </div>
-				                                </div>
-					                        </div>
-					                        <div class="col-md-4">
-				                                <div class="card card-box">
-				                                    <div class="card-body no-padding ">
-				                                    	<div class="doctor-profile">
-				                                                <img src="assets/img/user/usrbig1.jpg" class="doctor-pic" alt="">
-					                                        <div class="profile-usertitle">
-					                                            <div class="doctor-name">Land Rates </div>
-					                                        </div>
-
-				                                                <div><p><i class="fa fa-phone"></i><a href="tel:(123)456-7890">  (123)456-7890</a></p> </div>
-					                                        <div class="profile-userbuttons">
-					                                             <a href="pay.php" class="btn btn-circle deepPink-bgcolor btn-sm">Pay</a>
-                                                       <a href="lrr.php" class="btn btn-circle deepPink-bgcolor btn-sm">Receipt</a>
-					                                        </div>
-				                                        </div>
-				                                    </div>
-				                                </div>
-					                        </div>
-					                        <div class="col-md-4">
-				                                <div class="card card-box">
-				                                    <div class="card-body no-padding ">
-				                                    	<div class="doctor-profile">
-				                                                <img src="assets/img/user/usrbig2.jpg" class="doctor-pic" alt="">
-					                                        <div class="profile-usertitle">
-					                                            <div class="doctor-name">Rent </div>
-					                                        </div>
-
-				                                                <div><p><i class="fa fa-phone"></i><a href="tel:(123)456-7890">  (123)456-7890</a></p> </div>
-					                                        <div class="profile-userbuttons">
-					                                             <a href="house.php" class="btn btn-circle deepPink-bgcolor btn-sm">Houses</a>
-                                                        <a href="stalls.php" class="btn btn-circle deepPink-bgcolor btn-sm">Stalls</a>
-                                                         <a href="rr.php" class="btn btn-circle deepPink-bgcolor btn-sm">Receipt</a>
-					                                        </div>
-				                                        </div>
-				                                    </div>
-				                                </div>
-					                        </div>
-                    					</div>
-                    					<div class="row">
-					                        <div class="col-md-4">
-				                                <div class="card card-box">
-				                                    <div class="card-body no-padding ">
-				                                    	<div class="doctor-profile">
-				                                                <img src="assets/img/user/usrbig3.jpg" class="doctor-pic" alt="">
-					                                        <div class="profile-usertitle">
-					                                            <div class="doctor-name">Parking fees</div>
-					                                        </div>
-
-				                                                <div><p><i class="fa fa-phone"></i><a href="tel:(123)456-7890">  (123)456-7890</a></p> </div>
-					                                        <div class="profile-userbuttons">
-					                                             <a href="daily.php" class="btn btn-circle deepPink-bgcolor btn-sm">Daily</a>
-                                                       <a href="penalties.php" class="btn btn-circle deepPink-bgcolor btn-sm">Penalties</a>
-                                                       <a href="seasonal.php" class="btn btn-circle deepPink-bgcolor btn-sm">Seasonal</a><br>
-
-					                                        </div>
-                                                  <div class="profile-userbuttons">
-                                                  <a href="print.php" class="btn btn-circle deepPink-bgcolor btn-sm">Print Receipt</a>
-                                                  <a href="clamp.php" class="btn btn-circle deepPink-bgcolor btn-sm">Clamping Receipt</a>
+                                                            <a href="renew.php" class="btn btn-circle deepPink-bgcolor btn-sm">Renew</a>
+                                                            <!-- <a href="register.html" class="btn btn-circle deepPink-bgcolor btn-sm">Register</a> -->
+                                                            <!-- <a href="permit.html" class="btn btn-circle deepPink-bgcolor btn-sm">Permit</a> -->
+                                                            <a href="receipt.php" class="btn btn-circle deepPink-bgcolor btn-sm">Reprint Receipt</a>
+                                                        </div>
+                                                    </div>
                                                 </div>
-				                                        </div>
-				                                    </div>
-				                                </div>
-					                        </div>
-					                        <div class="col-md-4">
-				                                <div class="card card-box">
-				                                    <div class="card-body no-padding ">
-				                                    	<div class="doctor-profile">
-				                                                <img src="assets/img/user/usrbig4.jpg" class="doctor-pic" alt="">
-					                                        <div class="profile-usertitle">
-					                                            <div class="doctor-name">Utilities</div>
-					                                        </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card card-box">
+                                                <div class="card-body no-padding ">
+                                                    <div class="doctor-profile">
+                                                        <img src="assets/img/user/usrbig1.jpg" class="doctor-pic" alt="">
+                                                        <div class="profile-usertitle">
+                                                            <div class="doctor-name">Land Rates </div>
+                                                        </div>
 
-				                                                <div><p><i class="fa fa-phone"></i><a href="tel:(123)456-7890">  (123)456-7890</a></p> </div>
-					                                        <div class="profile-userbuttons">
-					                                             <a href="top.php" class="btn btn-circle deepPink-bgcolor btn-sm">Hospital</a>
-                                                       <a href="balance.php" class="btn btn-circle deepPink-bgcolor btn-sm">Water</a>
-                                                       <a href="statement.php" class="btn btn-circle deepPink-bgcolor btn-sm">Electri</a>
-					                                        </div>
-				                                        </div>
-				                                    </div>
-				                                </div>
-					                        </div>
+                                                        <div><p><i class="fa fa-phone"></i><a href="tel:(+254)456-7890">  (+254)456-7890</a></p> </div>
+                                                        <div class="profile-userbuttons">
+                                                            <a href="pay.php" class="btn btn-circle deepPink-bgcolor btn-sm">Pay</a>
+                                                            <a href="lrr.php" class="btn btn-circle deepPink-bgcolor btn-sm">Reprint Receipt</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card card-box">
+                                                <div class="card-body no-padding ">
+                                                    <div class="doctor-profile">
+                                                        <img src="assets/img/user/usrbig2.jpg" class="doctor-pic" alt="">
+                                                        <div class="profile-usertitle">
+                                                            <div class="doctor-name">Rent </div>
+                                                        </div>
+
+                                                        <div><p><i class="fa fa-phone"></i><a href="tel:(+254)456-7890">  (+254)456-7890</a></p> </div>
+                                                        <div class="profile-userbuttons">
+                                                            <a href="house.php" class="btn btn-circle deepPink-bgcolor btn-sm">Houses</a>
+                                                            <a href="stalls.php" class="btn btn-circle deepPink-bgcolor btn-sm">Stalls</a>
+                                                            <a href="rr.php" class="btn btn-circle deepPink-bgcolor btn-sm">Reprint Receipt</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="card card-box">
+                                                <div class="card-body no-padding ">
+                                                    <div class="doctor-profile">
+                                                        <img src="assets/img/user/usrbig3.jpg" class="doctor-pic" alt="">
+                                                        <div class="profile-usertitle">
+                                                            <div class="doctor-name">Parking fees</div>
+                                                        </div>
+
+                                                        <div><p><i class="fa fa-phone"></i><a href="tel:(+254)456-7890">  (+254)456-7890</a></p> </div>
+                                                        <div class="profile-userbuttons">
+                                                            <a href="daily.php" class="btn btn-circle deepPink-bgcolor btn-sm">Daily</a>
+                                                            <a href="seasonal.php" class="btn btn-circle deepPink-bgcolor btn-sm">Seasonal</a>
+                                                            <a href="penalties.php" class="btn btn-circle deepPink-bgcolor btn-sm">Penalties</a>
 
 
-                    					</div>
+                                                        </div>
+                                                        <div class="profile-userbuttons">
+                                                            <a href="print.php" class="btn btn-circle deepPink-bgcolor btn-sm">Print Receipt</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card card-box">
+                                                <div class="card-body no-padding ">
+                                                    <div class="doctor-profile">
+                                                        <img src="assets/img/user/usrbig4.jpg" class="doctor-pic" alt="">
+                                                        <div class="profile-usertitle">
+                                                            <div class="doctor-name">Miscelleneous</div>
+                                                        </div>
+
+                                                        <div><p><i class="fa fa-phone"></i><a href="tel:(+254)456-7890">  (+254)456-7890</a></p> </div>
+                                                        <div class="profile-userbuttons">
+                                                            <a href="top.php" class="btn btn-circle deepPink-bgcolor btn-sm">Pay</a>
+                                                            <a href="balance.php" class="btn btn-circle deepPink-bgcolor btn-sm">Reprint Receipt</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card card-box">
+                                                <div class="card-body no-padding ">
+                                                    <div class="doctor-profile">
+                                                        <img src="assets/img/user/usrbig4.jpg" class="doctor-pic" alt="">
+                                                        <div class="profile-usertitle">
+                                                            <div class="doctor-name">Cess</div>
+                                                        </div>
+
+                                                        <div><p><i class="fa fa-phone"></i><a href="tel:(+254)456-7890">  (+254)456-7890</a></p> </div>
+                                                        <div class="profile-userbuttons">
+                                                            <a href="top.php" class="btn btn-circle deepPink-bgcolor btn-sm">Pay</a>
+                                                            <a href="balance.php" class="btn btn-circle deepPink-bgcolor btn-sm">Reprint Receipt</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -445,17 +462,17 @@ if(isset($_SESSION["PhoneNumber"])){
     <script src="assets/plugins/jquery/jquery.min.js" ></script>
     <script src="assets/plugins/popper/popper.min.js" ></script>
     <script src="assets/plugins/jquery-blockui/jquery.blockui.min.js" ></script>
-	<script src="assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
     <!-- bootstrap -->
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js" ></script>
     <!-- Common js-->
-	<script src="assets/js/app.js" ></script>
+    <script src="assets/js/app.js" ></script>
     <script src="assets/js/layout.js" ></script>
-	<script src="assets/js/theme-color.js" ></script>
-	<!-- Material -->
-	<script src="assets/plugins/material/material.min.js"></script>
-	<!-- animation -->
-	<script src="assets/js/pages/ui/animations.js" ></script>
+    <script src="assets/js/theme-color.js" ></script>
+    <!-- Material -->
+    <script src="assets/plugins/material/material.min.js"></script>
+    <!-- animation -->
+    <script src="assets/js/pages/ui/animations.js" ></script>
     <!-- end js include path -->
 </body>
 </html>

@@ -284,140 +284,45 @@ if(isset($_SESSION["PhoneNumber"])){
             </div>
         </div>
         <!-- end sidebar menu -->
-        <!-- start page content -->
-        <div class="page-content-wrapper">
-            <div class="page-content">
-                <div class="page-bar">
-                    <div class="page-title-breadcrumb">
-                        <div class=" pull-left">
-                            <div class="page-title">Daily Parking Payment </div>
+			<!-- start page content -->
+            <div class="page-content-wrapper">
+                <div class="page-content">
+                    <div class="page-bar">
+                        <div class="page-title-breadcrumb">
+                            <div class=" pull-left">
+                                <div class="page-title">Land Rates </div>
+                            </div>
+                            <ol class="breadcrumb page-breadcrumb pull-right">
+                                <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index.php">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
+                                </li>
+                                <li class="active">Receipt</li>
+                            </ol>
                         </div>
-                        <ol class="breadcrumb page-breadcrumb pull-right">
-                            <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
-                            </li>
-                            <li class="active">Daily Parking</li>
-                        </ol>
                     </div>
-                </div>
 
 
-                <div class="row">
-                    <div class="col-md-12 col-sm-12">
+                    <div class="col-md-9 col-sm-9">
                         <div class="card card-box">
 
-                            <div class="card-body" id="bar-parent1">
-                                <div id="app">
-                                    <form action="#" id="form_sample_1" class="form-horizontal">
-                                        <div class="form-body">
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Select zone
-                                                    <span class="required"> * </span>
-                                                </label>
-                                                <div class="col-md-4">
-                                                    <select class="form-control" name="select" v-model="parkingPlace">
-                                                        <option value="">Select...</option>
-                                                        <option value="Category 1">Zone 1</option>
-                                                        <option value="Category 2">Zone 2</option>
-                                                        <option value="Category 3">Zone 3</option>
-                                                        <option value="Category 4">Zone 4</option>
-                                                        <option value="Category 5">Zone 5</option>
-                                                        <option value="Category 6">Zone 6</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Vehicle Type
-                                                    <span class="required"> * </span>
-                                                </label>
-                                                <div class="col-md-4">
-                                                    <select class="form-control" name="select" >
-                                                        <option value="">Select...</option>
-                                                        <option value="Category 1">Private</option>
-                                                        <option value="Category 2">Pickup</option>
-                                                        <option value="Category 3">Lorry</option>
-                                                        <option value="Category 4">Trailer</option>
-                                                        <option value="Category 5">Clamping Charges</option>
-                                                        <option value="Category 6">Damage of Clamps</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group row">
-                                                <label class="control-label col-md-3">Vehicle Registration
-                                                    <span class="required"> * </span>
-                                                </label>
-                                                <input class="col-md-4" type="text" v-model="regNo" >
-                                            </div>
-                                        </div>
-
-
-
-                                    </form>
+                            <div class="card-body " id="bar-parent">
+                                <form>
                                     <div class="form-group">
-                                        <div class="offset-md-3 col-md-9">
-                                            <!-- <button type="submit" class="btn btn-info">Submit</button> -->
-                                            <p>
-                                                <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Mpesa</a>
-                                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Cash</button>
-                                            </p>
-                                            <div class="row">
-                                                <div class="col">
-                                                    <div class="collapse multi-collapse" id="multiCollapseExample1">
-                                                        <div class="card card-body">
-                                                            <input type="text" name="phone" value="" id="phone"  v-model="phoneNumber"
-                                                                   placeholder="Enter Phone Number"
-                                                                   data-trigger="change"
-                                                                   data-validation-minlength="1" data-type="number"
-                                                                   data-required="true"
-                                                                   data-error-message="Enter a valid number."/>
-                                                            <div>
-                                                                <button v-on:click="parkingDaily" class="btn btn-primary" type="button"
-                                                                        style="  width:100px; text-align: center; margin-left:0%;margin-top:13px;">
-                                                                    Pay
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
 
-
-                                                </div>
-                                                <div class="col">
-                                                    <div class="collapse multi-collapse" id="multiCollapseExample2">
-                                                        <div class="card card-body">
-                                                            <input type="text" name="phone" value="" id="phone" v-model="phoneNumber"
-                                                                   placeholder="Enter Phone Number"
-                                                                   data-trigger="change"
-                                                                   data-validation-minlength="1" data-type="number"
-                                                                   data-required="true"
-                                                                   data-error-message="Enter a valid number."/>
-                                                            <div>
-                                                                <button v-on:click="cash" class="btn btn-primary" type="button"
-                                                                        style="  width:100px; text-align: center; margin-left:0%;margin-top:13px;">
-                                                                    Pay
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
-                                    </form>
-                                </div>
-
+                                    <button type="submit" class="btn btn-primary">Print receipt</button>
+                                </form>
                             </div>
                         </div>
                     </div>
+
+
+
+
+
+
                 </div>
-
-
-
-
-
-
             </div>
-        </div>
-        <!-- end page content -->
+            <!-- end page content -->
 
         <!-- start footer -->
         <div class="page-footer">
@@ -430,133 +335,21 @@ if(isset($_SESSION["PhoneNumber"])){
         </div>
         <!-- end footer -->
     </div>
-</div>
-<!-- start js include path -->
-<script src="assets/plugins/jquery/jquery.min.js" ></script>
-<script src="assets/plugins/popper/popper.min.js" ></script>
-<script src="assets/plugins/jquery-blockui/jquery.blockui.min.js" ></script>
-<script src="assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- bootstrap -->
-<script src="assets/plugins/bootstrap/js/bootstrap.min.js" ></script>
-<!-- Common js-->
-<script src="assets/js/app.js" ></script>
-<script src="assets/js/layout.js" ></script>
-<script src="assets/js/theme-color.js" ></script>
-<!-- Material -->
-<script src="assets/plugins/material/material.min.js"></script>
-<!-- animation -->
-<script src="assets/js/pages/ui/animations.js" ></script>
-<!-- end js include path -->
-<script>
-
-   /* function getCookie(user) {
-        var name = user + "=";
-        var decodedCookie = decodeURIComponent(document.cookie);
-        var ca = decodedCookie.split(';');
-        for(var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-            }
-            if (c.indexOf(name) == 0) {
-                return c.substring(name.length, c.length);
-            }
-        }
-        return "";
-    }
-
-    function checkCookie() {
-        var user=getCookie("username");
-        if (user != "") {
-            alert("Welcome again " + user);
-
-        } else {
-            //window.location='http://revenuesure.nouveta.co.ke';
-            alert("Welcome again " + user);
-        }
-    }
-*/
-</script>
-
-
+    <!-- start js include path -->
+    <script src="assets/plugins/jquery/jquery.min.js" ></script>
+    <script src="assets/plugins/popper/popper.min.js" ></script>
+    <script src="assets/plugins/jquery-blockui/jquery.blockui.min.js" ></script>
+	<script src="assets/plugins/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- bootstrap -->
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js" ></script>
+    <!-- Common js-->
+	<script src="assets/js/app.js" ></script>
+    <script src="assets/js/layout.js" ></script>
+	<script src="assets/js/theme-color.js" ></script>
+	<!-- Material -->
+	<script src="assets/plugins/material/material.min.js"></script>
+	<!-- animation -->
+	<script src="assets/js/pages/ui/animations.js" ></script>
+    <!-- end js include path -->
 </body>
-<script src="https://unpkg.com/vue@2.0.3/dist/vue.js"></script>
-<script src="https://unpkg.com/axios@0.12.0/dist/axios.min.js"></script>
-<script src="https://unpkg.com/lodash@4.13.1/lodash.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
-<script>
-
-    var app = new Vue({
-        el: '#app',
-        data :{
-            regNo: '',
-            parkingPlace: '',
-            phoneNumber:'',
-        },
-        methods: {
-            parkingDaily: function () {
-
-                var app = this
-                var formData = new FormData;
-                url = 'http://localhost/revenuesure/api/index.php?function=ParkingDaily'
-                formData.append('function', 'ParkingDaily');
-                formData.append('RegNo', app.regNo);
-                formData.append('parking_place',app.parkingPlace),
-                    formData.append('phonenumber',app.phoneNumber);
-                $.ajax({
-                    url: "test.html",
-                    cache: false,
-                    beforeSend: function ( xhr ) {
-                        $.blockUI({ overlayCSS: { backgroundColor: '#fff6f6' } });
-                    }
-                }).done(function( html ) {
-                    // Do your work
-                    $.unblockUI();
-                });
-                axios.post(url, formData).then(response=>{
-
-                    /*if(!alert('Check your phone to complete the payments!'))
-                    {window.location.reload();}*/
-                    console.log(response.data)
-
-                }).catch(function (error) {
-                    console.log(error);
-                });
-            },
-            cash: function () {
-
-                var app = this
-                var formData = new FormData;
-                url = 'http://localhost/revenuesure/api/index.php?function=cash'
-                formData.append('function', 'cash');
-                formData.append('RegNo', app.regNo);
-                formData.append('parking_place',app.parkingPlace),
-                    formData.append('phonenumber',app.phoneNumber);
-                $.ajax({
-                    url: "test.html",
-                    cache: false,
-                    beforeSend: function ( xhr ) {
-                        $.blockUI({ overlayCSS: { backgroundColor: '#fff6f6' } });
-                    }
-                }).done(function( html ) {
-                    // Do your work
-                    $.unblockUI();
-                });
-                axios.post(url, formData).then(response=>{
-
-                    if(!alert('payments confirmed!'))
-                    {window.location.href="http://localhost/revenuesure/revenue/return.php";}
-                    console.log(response.data)
-
-                }).catch(function (error) {
-                    console.log(error);
-                });
-            }
-
-        },
-
-    })
-
-</script>
-
-    </html>
+</html>

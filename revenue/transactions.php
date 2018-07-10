@@ -1,4 +1,6 @@
 <?php
+
+include "../api/index.php";
 session_start();
 if(isset($_SESSION["PhoneNumber"])){
     echo "ok";
@@ -77,7 +79,7 @@ if(isset($_SESSION["PhoneNumber"])){
                 <ul class="nav navbar-nav pull-right">
                     <!-- start language menu -->
                     <li style="padding-top:10px">
-                        <a href="transactions.html"><button type="button" >Your Transactions</button></a>
+                        <a href="transactions.php"><button type="button" >Your Transactions</button></a>
                     </li>
 
 
@@ -290,7 +292,7 @@ if(isset($_SESSION["PhoneNumber"])){
                     <div class="page-bar">
                         <div class="page-title-breadcrumb">
                             <div class=" pull-left">
-                                <div class="page-title">Your Transactions </div>
+                                <div class="page-title">Your Transactions as per <?php echo $current_date;?> </div>
                             </div>
                             <ol class="breadcrumb page-breadcrumb pull-right">
                                 <li><i class="fa fa-home"></i>&nbsp;<a class="parent-item" href="index.html">Home</a>&nbsp;<i class="fa fa-angle-right"></i>
@@ -298,6 +300,36 @@ if(isset($_SESSION["PhoneNumber"])){
                                 <li class="active">Transactions</li>
                             </ol>
                         </div>
+                    </div>
+                    <div>
+                        <div class="card-deck">
+                            <div class="card bg-primary">
+                                <div class="card-body text-center">
+                                    <p class="card-text"><ul>
+                                        M-pesa <br>
+                                        Amount:KES <?php echo $mpesa;?><br>
+                                    </ul></p>
+                                </div>
+                            </div>
+                            <div class="card bg-warning">
+                                <div class="card-body text-center">
+                                    <p class="card-text"><ul>
+                                        Cash <br>
+                                        Amount:KES <?php echo $cash;?><br>
+                                    </ul></p>
+                                </div>
+                            </div>
+                            <div class="card bg-success">
+                                <div class="card-body text-center">
+                                    <p class="card-text"><ul>
+                                        Total <br>
+                                        Amount:KES <?php $total=$cash+$mpesa;
+                                        echo $total;
+                                        ?><br>
+                                    </ul></p>
+                                </div>
+                            </div>
+
                     </div>
                     <div class="row">
 									<div class="col-xs-12 col-sm-12">
@@ -325,7 +357,6 @@ if(isset($_SESSION["PhoneNumber"])){
 														<th>Transaction</th>
 														<th class="hidden-480">Amount</th>
 														<th>Mode</th>
-														<th class="hidden-480">Status</th>
 														<th></th>
 													</tr>
 												</thead>
@@ -358,299 +389,6 @@ if(isset($_SESSION["PhoneNumber"])){
 															</div>
 														</td>
 													</tr>
-
-													<tr>
-														<td class="center">
-															<label class="pos-rel">
-																<input type="checkbox" class="ace" />
-																<span class="lbl"></span>
-															</label>
-														</td>
-
-														<td>2/2/2018</td>
-
-														<td>Daily Prking</td>
-														<td class="hidden-480">300</td>
-														<td>mpesa</td>
-
-														<td class="hidden-480">
-															<span class="label label-sm label-success">Registered</span>
-														</td>
-
-														<td>
-															<div class="hidden-sm hidden-xs action-buttons">
-																<a class="blue" href="#">
-																	<i class="ace-icon fa fa-search-plus bigger-130"></i>
-																</a>
-															</div>
-														</td>
-													</tr>
-
-													<tr>
-														<td class="center">
-															<label class="pos-rel">
-																<input type="checkbox" class="ace" />
-																<span class="lbl"></span>
-															</label>
-														</td>
-
-														<td>4/2/2018</td>
-														<td>Renew Business Permit</td>
-														<td class="hidden-480">4,400</td>
-														<td>mpesa</td>
-
-														<td class="hidden-480">
-															<span class="label label-sm label-warning">Expiring</span>
-														</td>
-
-														<td>
-															<div class="hidden-sm hidden-xs action-buttons">
-																<a class="blue" href="#">
-																	<i class="ace-icon fa fa-search-plus bigger-130"></i>
-																</a>
-															</div>
-														</td>
-													</tr>
-
-													<tr>
-														<td class="center">
-															<label class="pos-rel">
-																<input type="checkbox" class="ace" />
-																<span class="lbl"></span>
-															</label>
-														</td>
-
-														<td>7/2/2018</td>
-														<td>Land Rates</td>
-														<td class="hidden-480">6,500</td>
-														<td>mpesa</td>
-
-														<td class="hidden-480">
-															<span class="label label-sm label-inverse arrowed-in">Flagged</span>
-														</td>
-
-														<td>
-															<div class="hidden-sm hidden-xs action-buttons">
-																<a class="blue" href="#">
-																	<i class="ace-icon fa fa-search-plus bigger-130"></i>
-																</a>
-															</div>
-														</td>
-													</tr>
-
-                          <tr>
-                            <td class="center">
-                              <label class="pos-rel">
-                                <input type="checkbox" class="ace" />
-                                <span class="lbl"></span>
-                              </label>
-                            </td>
-
-                            <td>
-                              1/2/2018
-                            </td>
-                            <td>Daily Parking</td>
-                            <td class="hidden-480">300</td>
-                            <td>mpesa</td>
-
-                            <td class="hidden-480">
-                              <span class="label label-sm label-warning">Expiring</span>
-                            </td>
-
-                            <td>
-                              <div class="hidden-sm hidden-xs action-buttons">
-                                <a class="blue" href="#">
-                                  <i class="ace-icon fa fa-search-plus bigger-130"></i>
-                                </a>
-                              </div>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td class="center">
-                              <label class="pos-rel">
-                                <input type="checkbox" class="ace" />
-                                <span class="lbl"></span>
-                              </label>
-                            </td>
-
-                            <td>2/2/2018</td>
-
-                            <td>Daily Prking</td>
-                            <td class="hidden-480">300</td>
-                            <td>mpesa</td>
-
-                            <td class="hidden-480">
-                              <span class="label label-sm label-success">Registered</span>
-                            </td>
-
-                            <td>
-                              <div class="hidden-sm hidden-xs action-buttons">
-                                <a class="blue" href="#">
-                                  <i class="ace-icon fa fa-search-plus bigger-130"></i>
-                                </a>
-
-                              </div>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td class="center">
-                              <label class="pos-rel">
-                                <input type="checkbox" class="ace" />
-                                <span class="lbl"></span>
-                              </label>
-                            </td>
-
-                            <td>4/2/2018</td>
-                            <td>Renew Business Permit</td>
-                            <td class="hidden-480">4,400</td>
-                            <td>mpesa</td>
-
-                            <td class="hidden-480">
-                              <span class="label label-sm label-warning">Expiring</span>
-                            </td>
-
-                            <td>
-                              <div class="hidden-sm hidden-xs action-buttons">
-                                <a class="blue" href="#">
-                                  <i class="ace-icon fa fa-search-plus bigger-130"></i>
-                                </a>
-                              </div>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td class="center">
-                              <label class="pos-rel">
-                                <input type="checkbox" class="ace" />
-                                <span class="lbl"></span>
-                              </label>
-                            </td>
-
-                            <td>7/2/2018</td>
-                            <td>Land Rates</td>
-                            <td class="hidden-480">6,500</td>
-                            <td>mpesa</td>
-
-                            <td class="hidden-480">
-                              <span class="label label-sm label-inverse arrowed-in">Flagged</span>
-                            </td>
-
-                            <td>
-                              <div class="hidden-sm hidden-xs action-buttons">
-                                <a class="blue" href="#">
-                                  <i class="ace-icon fa fa-search-plus bigger-130"></i>
-                                </a>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="center">
-                              <label class="pos-rel">
-                                <input type="checkbox" class="ace" />
-                                <span class="lbl"></span>
-                              </label>
-                            </td>
-
-                            <td>
-                              1/2/2018
-                            </td>
-                            <td>Daily Parking</td>
-                            <td class="hidden-480">300</td>
-                            <td>mpesa</td>
-
-                            <td class="hidden-480">
-                              <span class="label label-sm label-warning">Expiring</span>
-                            </td>
-
-                            <td>
-                              <div class="hidden-sm hidden-xs action-buttons">
-                                <a class="blue" href="#">
-                                  <i class="ace-icon fa fa-search-plus bigger-130"></i>
-                                </a>
-                              </div>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td class="center">
-                              <label class="pos-rel">
-                                <input type="checkbox" class="ace" />
-                                <span class="lbl"></span>
-                              </label>
-                            </td>
-
-                            <td>2/2/2018</td>
-
-                            <td>Daily Prking</td>
-                            <td class="hidden-480">300</td>
-                            <td>mpesa</td>
-
-                            <td class="hidden-480">
-                              <span class="label label-sm label-success">Registered</span>
-                            </td>
-
-                            <td>
-                              <div class="hidden-sm hidden-xs action-buttons">
-                                <a class="blue" href="#">
-                                  <i class="ace-icon fa fa-search-plus bigger-130"></i>
-                                </a>
-                              </div>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td class="center">
-                              <label class="pos-rel">
-                                <input type="checkbox" class="ace" />
-                                <span class="lbl"></span>
-                              </label>
-                            </td>
-
-                            <td>4/2/2018</td>
-                            <td>Renew Business Permit</td>
-                            <td class="hidden-480">4,400</td>
-                            <td>mpesa</td>
-
-                            <td class="hidden-480">
-                              <span class="label label-sm label-warning">Expiring</span>
-                            </td>
-
-                            <td>
-                              <div class="hidden-sm hidden-xs action-buttons">
-                                <a class="blue" href="#">
-                                  <i class="ace-icon fa fa-search-plus bigger-130"></i>
-                                </a>
-                              </div>
-                            </td>
-                          </tr>
-
-                          <tr>
-                            <td class="center">
-                              <label class="pos-rel">
-                                <input type="checkbox" class="ace" />
-                                <span class="lbl"></span>
-                              </label>
-                            </td>
-
-                            <td>7/2/2018</td>
-                            <td>Land Rates</td>
-                            <td class="hidden-480">6,500</td>
-                            <td>mpesa</td>
-
-                            <td class="hidden-480">
-                              <span class="label label-sm label-inverse arrowed-in">Flagged</span>
-                            </td>
-
-                            <td>
-                              <div class="hidden-sm hidden-xs action-buttons">
-                                <a class="blue" href="#">
-                                  <i class="ace-icon fa fa-search-plus bigger-130"></i>
-                                </a>
-                              </div>
-                            </td>
-                          </tr>
 												</tbody>
 											</table>
 										</div>

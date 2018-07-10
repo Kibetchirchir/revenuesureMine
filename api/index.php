@@ -1114,8 +1114,64 @@ LEFT JOIN `revenue_sources` on `revenue_sources`.`RevID`=`payments`.`RevID`');
 //$pdf->Table($link,'select RevSource, format(pop,0) as pop, rank from revenue_sources order by rank limit 0,10',$prop);
     $pdf->Output();
 }
-if($function=='addrevenueStream'){
+if($function=="cash"){
+    $Amount =ParkingDailyFee();
+    $RevID = '1';
+    $Subscription = 'Daily';
+    $RegNo = $_REQUEST['RegNo'];
+    $parking_place = $_REQUEST['parking_place'];
+    $payBill='175555';
+    $phonenumber=formatPhoneNumber($_REQUEST['phonenumber']);
+    $ParkingFee=ParkingDailyFee();
+    $branch=$_SESSION["branch"];
+    $id=$_SESSION["PhoneNumber"];
+    $status=1;
 
+
+    $sql = "INSERT INTO `payments`(`Transaction_code`, `Amount`,`RevID`, `Mode`,`Status`,`branch`,`ID`) 
+              VALUES ('$Transaction_code','$Amount','$RevID','cash','1','$branch','$id')";
+    $result2 = DB::instance()->executeSQL($sql);
+    $sql = "INSERT INTO `parking`(`ParkingFee`, `Subscription`, `RegNo`, `parking_place`, `Transaction_code`) 
+                                VALUES ('$ParkingFee','$Subscription','$RegNo','$parking_place','$Transaction_code')";
+    $result = DB::instance()->executeSQL($sql);
+
+
+    if($result && $result2){
+        $data ="You have paid $Subscription Parking fee for Car Reg:$RegNo at $parking_place, please send KES $Amount to paybill number $payBill Account number $Transaction_code.";
+
+        //pushPayments($Amount,$phonenumber,$Transaction_code,$TransactionDesc);
+        //sendSMS($phonenumber,$data);
+        $response = new Response();
+        $response->status = Response::STATUS_SUCCESS;
+        $response->message= "cash successful";
+        $response->data =$Transaction_code;
+        $response->success = true;
+        echo json_encode($response);
+        exit();
+    }else{
+
+        $response = new Response();
+        $response->status = Response::STATUS_SUCCESS;
+        $response->message= "failed";
+        $response->success = false;
+        echo json_encode($response);
+        exit();
+    }
 
 
 }
+
+$id=$_SESSION["PhoneNumber"];
+
+$sql="SELECT SUM(`Amount`) as total,`Mode` FROM `payments` WHERE `ID`='$id' AND `Status` =1 AND `Mode`='cash' GROUP BY `Mode`";
+
+    $result=DB::instance()->executeSQL($sql);
+
+    $cash=$result->fetch_assoc()['total'];
+    $sql="SELECT SUM(`Amount`) as total,`Mode` FROM `payments` WHERE `ID`='$id' AND `Status` =1 AND `Mode`='Mpesa' GROUP BY `Mode`";
+    $result=DB::instance()->executeSQL($sql);
+
+    $mpesa=$result->fetch_assoc()['total'];
+
+     $current_date =  date('Y-m-d H:i:s');
+          $date = date('FORMAT');

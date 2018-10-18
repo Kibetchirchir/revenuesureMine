@@ -1,10 +1,3 @@
-<?php
-
-
-include "../api/index.php";
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1090,7 +1083,7 @@ include "../api/index.php";
 
                 var formData = new FormData();
                 formData.append('function', 'parking');
-                axios.post('http://localhost/rcounty/api/index.php?function=parking')
+                axios.post('https://www.nouveta.tech/revenuesure/api/index.php?function=parking')
                     .then( (response) => {
                         response.data.data.forEach((response) => {
                             this.dailyIncome.push(response)
@@ -1107,7 +1100,7 @@ include "../api/index.php";
             getMonthlyIncome: function(){
                 var formData = new FormData;
                 formData.append('function', 'parkingmonth');
-                axios.post('http://localhost/rcounty/api/index.php?function=parkingmonth')
+                axios.post('https://www.nouveta.tech/revenuesure/api/index.php?function=parkingmonth')
                     .then( (response) => {
                         response.data.data.forEach((response) => {
                             this.monthlyIncome.push(response)

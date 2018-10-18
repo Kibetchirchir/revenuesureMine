@@ -12,6 +12,7 @@ include "helpers/AfricasTalkingGateway.php";
 include 'helpers/fpdf/fpdf.php';
 
 
+
 $IDNO=$_REQUEST['Idno'];
 $branch=$_REQUEST['branch'];
 $FirstName=$_REQUEST['username'];
@@ -32,7 +33,7 @@ if($password==$prepassword){
     if($count>=1){
         $message = "User exists\\nTry again with different number or ID.";
         //echo "<script type='text/javascript'>alert('$message');document.location='https://revenuesure.ticketsoko.com'</script>";
-        echo "<script type='text/javascript'>alert('$message');document.location='http://localhost/revenuesure'</script>";
+        echo "<script type='text/javascript'>alert('$message');document.location='https://www.nouveta.tech/revenuesure'</script>";
     }else
     {
         $sql="INSERT INTO `registration`(`FirstName`,`branch`,`PhoneNumber`, `Password`, `IDNO_PASSNO`) 
@@ -41,15 +42,15 @@ if($password==$prepassword){
         $result= DB::instance()->executeSQL($sql);
         if($result){
             $message = "REGISTERED SUCCESSFULL.\\nLOG IN.";
-            echo "<script type='text/javascript'>alert('$message');document.location='http://localhost/revenuesure'</script>";
+            echo "<script type='text/javascript'>alert('$message');document.location='https://www.nouveta.tech/revenuesure'</script>";
         }else{
             $message = "Try again.\\nTry again.";
-            echo "<script type='text/javascript'>alert('$message');location='http://localhost/revenuesure</script>";;
+            echo "<script type='text/javascript'>alert('$message');location='https://www.nouveta.tech/revenuesure</script>";;
         }
     }
 
 
 }else
 {
-    echo "<script type='text/javascript'>alert('the password did not match');document.location='https://revenuesure.ticketsoko.com'</script>";
+    echo "<script type='text/javascript'>alert('the password did not match');document.location='https://www.nouveta.tech'</script>";
 }

@@ -1,11 +1,11 @@
 <?php
 session_start();
-if(isset($_SESSION["PhoneNumber"])){
+/*if(isset($_SESSION["PhoneNumber"])){
     echo "ok";
 }else
 {
-    echo "<script type='text/javascript'>document.location='http://localhost/revenuesure/'</script>";
-}
+    echo "<script type='text/javascript'>document.location='https://www.nouveta.tech/revenuesure/'</script>";
+}*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -409,8 +409,8 @@ if(isset($_SESSION["PhoneNumber"])){
 
                                                         <div><p><i class="fa fa-phone"></i><a href="tel:(+254)456-7890">  (+254)456-7890</a></p> </div>
                                                         <div class="profile-userbuttons">
-                                                            <a href="top.php" class="btn btn-circle deepPink-bgcolor btn-sm">Pay</a>
-                                                            <a href="balance.php" class="btn btn-circle deepPink-bgcolor btn-sm">Reprint Receipt</a>
+                                                            <a href="miscelenious.php" class="btn btn-circle deepPink-bgcolor btn-sm">Pay</a>
+                                                            <a href="miscelenious.php" class="btn btn-circle deepPink-bgcolor btn-sm">Reprint Receipt</a>
                                                         </div>
                                                     </div>
                                                 </div>

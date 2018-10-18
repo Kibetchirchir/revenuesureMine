@@ -4,7 +4,7 @@ if(isset($_SESSION["PhoneNumber"])){
     echo "ok";
 }else
 {
-    echo "<script type='text/javascript'>document.location='http://localhost/revenuesure/'</script>";
+    //echo "<script type='text/javascript'>document.location='https://nouveta/'</script>";
 }
 ?>
 <!DOCTYPE html>
@@ -299,7 +299,24 @@ if(isset($_SESSION["PhoneNumber"])){
                             </ol>
                         </div>
                     </div>
-
+                    <table>
+                       <th>invoice</th>
+                        <th><?php echo $_SESSION["invoice"] ?></th>
+                        <tr>
+                            <td>service</td>
+                            <td><?php echo $_SESSION["service"] ?></td>
+                        </tr>
+                        <tr>
+                            <td>amount</td>
+                            <td><?php echo $_SESSION["amount"] ?></td>
+                            </tr>
+                        </tr>
+                        <tr>
+                            <td>subcounty</td>
+                            <td><?php echo $_SESSION["subcounty"] ?></td>
+                            </tr>
+                        </tr>
+                    </table>
 
                     <div class="col-md-9 col-sm-9">
                         <div class="card card-box">

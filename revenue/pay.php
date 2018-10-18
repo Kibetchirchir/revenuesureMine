@@ -1,12 +1,10 @@
 <?php
-
-include "../api/index.php";
 session_start();
 if(isset($_SESSION["PhoneNumber"])){
     echo "ok";
 }else
 {
-    echo "<script type='text/javascript'>document.location='http://localhost/revenuesure/'</script>";
+    echo "<script type='text/javascript'>document.location='https://www.nouveta.tech/revenuesure/'</script>";
 }
 ?>
 <!DOCTYPE html>
@@ -404,7 +402,7 @@ if(isset($_SESSION["PhoneNumber"])){
 
                 var app = this
                 var formData = new FormData;
-                url = 'http://localhost/rcounty/api/index.php'
+                url = 'https://www.nouveta.tech/revenuesure/api/index.php'
                 formData.append('function', 'CreateLandRate');
                 formData.append('LandNo', app.landNo);
                 formData.append('PhoneNo',app.phoneNumber);

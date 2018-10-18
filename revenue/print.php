@@ -1,11 +1,11 @@
 <?php
-session_start();
+/*session_start();
 if(isset($_SESSION["PhoneNumber"])){
     echo "ok";
 }else
 {
-    echo "<script type='text/javascript'>document.location='http://localhost/revenuesure/'</script>";
-}
+    echo "<script type='text/javascript'>document.location='https://www.nouveta.tech/revenuesure/'</script>";
+}*/
 ?>
 <!DOCTYPE html>
 <html lang="en">

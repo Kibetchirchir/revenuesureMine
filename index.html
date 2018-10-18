@@ -35,7 +35,7 @@
 	<![endif]-->
 </head>
 
-<body class="login-layout">
+<body class="login-layout" >
 <div class="main-container">
 	<div class="main-content">
 		<div class="row">
@@ -47,7 +47,8 @@
 							<span class="red">Revenue Sure</span>
 							<span class="white" id="id-text2">Application</span>
 						</h1>
-						<h4 class="blue" id="id-company-text">&copy; County</h4>
+						<h4 class="blue" id="id-company-text">&copy;County</h4>
+						<img src="bg.jpeg" class="img-circle user-img-circle" alt="User Image" />
 					</div>
 
 					<div class="space-6"></div>
@@ -63,7 +64,7 @@
 
 									<div class="space-6"></div>
 
-									<form action="http://localhost/revenuesure/api/login.php" method="POST">
+									<form action="https://www.nouveta.tech/revenuesure/api/login.php" method="POST">
 										<fieldset>
 											<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
@@ -168,11 +169,11 @@
 									<div class="space-6"></div>
 									<p> Enter your details to begin: </p>
 
-									<form action="http://localhost/revenuesure/api/register.php" method="POST">
+									<form action="http://localhost/revenuesure/api/register.php" method="get">
 										<fieldset>
 											<label class="block clearfix">
 														<span class="block input-icon input-icon-right">
-															<input type="phone number" name="phonenumber" class="form-control" placeholder="07xxxxxxx" required/>
+															<input type="text" name="phonenumber" class="form-control" placeholder="07xxxxxxx" required/>
 															<i class="ace-icon fa fa-phone"></i>
 														</span>
 											</label>
@@ -220,7 +221,7 @@
 													<span class="bigger-110">Reset</span>
 												</button>
 
-												<input type="submit" value="Submit" class="width-35 pull-right btn btn-sm btn-danger>
+												<input type="submit" value="Submit" class="width-35 pull-right btn btn-sm btn-danger">
 													</div>
 												</fieldset>
 											</form>

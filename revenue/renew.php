@@ -1,11 +1,5 @@
 <?php
 session_start();
-if(isset($_SESSION["PhoneNumber"])){
-    echo "ok";
-}else
-{
-    echo "<script type='text/javascript'>document.location='http://localhost/revenuesure/'</script>";
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">

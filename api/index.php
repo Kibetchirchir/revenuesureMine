@@ -584,6 +584,11 @@ if($function=='Bpnew'){
 
 
        if($result && $result2){
+           $_SESSION["invoice"] = $Transaction_code;
+           $_SESSION["service"] = 'Parking Daily for '.$RegNo;
+           $_SESSION['amount']=$Amount;
+           $_SESSION["subcounty"] = $parking_place;
+
            $data ="To pay your $Subscription Parking fee for Car Reg:$RegNo at $parking_place, please send KES $Amount to paybill number $payBill Account number $Transaction_code. Once payment is confirmed.You'll get a confirmation      message. if paid and received the confirmation, ignore this SMS.";
 
           pushPayments($Amount,$phonenumber,$Transaction_code,$TransactionDesc);
@@ -591,7 +596,7 @@ if($function=='Bpnew'){
            $response = new Response();
            $response->status = Response::STATUS_SUCCESS;
            $response->message= "Notification sent to your phone to make payment";
-           $response->data =$Transaction_code;
+           $response->data =$Transaction;
            $response->success = true;
            echo json_encode($response);
            exit();
@@ -1159,6 +1164,62 @@ if($function=="cash"){
     }
 
 
+}
+if($function=='invoice'){
+
+    $business=$_REQUEST['business'];
+    $subcounty=$_REQUEST['subcounty'];
+    $narration=$_REQUEST['narration'];
+    $amount=$_REQUEST['newRate'];
+    $invoice=getReceipt();
+
+    $sql="INSERT INTO `invoice`(`subcounty`, `narration`, `amount`, `type`,`invoiceNumber`) VALUES ('$subcounty','$narration','$amount','$business','$invoice')";
+    $result = DB::instance()->executeSQL($sql);
+
+
+    if($result){
+        $_SESSION["invoice"] = $invoice;
+        $_SESSION["service"] = $business;
+        $_SESSION['amount']=$amount;
+        $_SESSION["subcounty"] = $subcounty;
+
+        $response = new Response();
+        $response->status = Response::STATUS_SUCCESS;
+        $response->message= "saved";
+        $response->data =$Transaction_code;
+        $response->success = true;
+        echo json_encode($response);
+        exit();
+    }else
+    {
+        $response = new Response();
+        $response->status = Response::STATUS_SUCCESS;
+        $response->message= "failled";
+        $response->data =$Transaction_code;
+        $response->success = false;
+        echo json_encode($response);
+        exit();
+    }
+}
+if($function=='confirm'){
+
+    $invoice=$_REQUEST['invoicenumber'];
+
+    $sql="SELECT * FROM `invoice` where `invoiceNumber`='$invoice'";
+    $result = DB::instance()->executeSQL($sql);
+    $count=mysqli_num_rows($result);
+    $row=$result->fetch_assoc();
+
+    if($count = 1){
+        $_SESSION["invoice"] = $row['invoiceNumber'];
+        $_SESSION["service"] = $row['type'];
+        $_SESSION['amount']=$row['amount'];
+        $_SESSION["subcounty"] = $row['subcounty'];
+
+    }else
+    {
+        echo "<script type='text/javascript'>alert('The invoice is invalid');document.location='https://www.nouveta.tech/revenuesure/revenue/miscelenious.php'</script>";
+    }
 }
 
 $id=$_SESSION["PhoneNumber"];

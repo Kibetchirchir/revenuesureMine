@@ -470,7 +470,7 @@ if(isset($_SESSION["PhoneNumber"])){
 
                 var app = this
                 var formData = new FormData;
-                url = 'http://localhost/rcounty/api/index.php'
+                url = 'https://www.nouveta.tech/revenuesure/api/index.php'
                 formData.append('function', 'Bpnew');
                 formData.append('BusinessNo', app.businessNo);
                 formData.append('Year',app.year);

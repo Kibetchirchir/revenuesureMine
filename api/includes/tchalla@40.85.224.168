@@ -13,5 +13,4 @@ class DBConfig
     public $password='qiVr6tsl';
 
     public $database='revenuesure';
-
 }

@@ -4,7 +4,7 @@ if(isset($_SESSION["PhoneNumber"])){
     echo "ok";
 }else
 {
-    echo "<script type='text/javascript'>document.location='http://localhost/revenuesure/'</script>";
+    echo "<script type='text/javascript'>document.location='https://www.nouveta.tech/revenuesure/'</script>";
 }
 ?>
 <!DOCTYPE html>
@@ -312,7 +312,7 @@ if(isset($_SESSION["PhoneNumber"])){
                                     </div>
                                     <div class="form-group">
                                         <label for="simpleFormPassword">Amount</label>
-                                        <input type="password" class="form-control" id="simpleFormPassword" placeholder="Password">
+                                        <input type="text" class="form-control" id=" placeholder="amount">
                                     </div>
                                     <div class="form-group">
 

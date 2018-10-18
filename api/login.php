@@ -13,9 +13,7 @@ include 'helpers/fpdf/fpdf.php';
 
 
 session_start();
-if(isset($_SESSION["PhoneNumber"])){
-    session_destroy();
-}
+
 $phonenumber= $_POST['phonenumber'];
 $password = $_POST['password'];
 
@@ -39,17 +37,17 @@ if($count==1){
     setcookie($cookie_name, $cookie_value, time() + (86400), "/"); // 86400 = 1 day);
 
     if(!isset($_COOKIE[$cookie_name])) {
-        echo "<script type='text/javascript'>document.location='https://localhost/revenuesure/revenue'</script>";
+        echo "<script type='text/javascript'>document.location='https://www.nouveta.tech/revenuesure/revenue'</script>";
         echo $_COOKIE[$cookie_name];
     } else {
 
-        echo  "<script type='text/javascript'>document.location='http://localhost/revenuesure/revenue'</script>";
+        echo  "<script type='text/javascript'>document.location='https://www.nouveta.tech/revenuesure/revenue'</script>";
         echo $_COOKIE[$cookie_name];
     }
     //header("location:http://revenuesure.nouveta.co.ke/Portal/");
 }
 else{
     $message = "The password enter did not match .\\nTry again.";
-    echo "<script type='text/javascript'>alert('$message');document.location='https://revenuesure.ticketsoko.com'</script>";
+    echo "<script type='text/javascript'>alert('$message');document.location='https://www.nouveta.tech/revenuesure'</script>";
 
 }

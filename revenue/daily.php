@@ -4,7 +4,7 @@ if(isset($_SESSION["PhoneNumber"])){
     echo "ok";
 }else
 {
-    echo "<script type='text/javascript'>document.location='http://localhost/revenuesure/'</script>";
+    echo "<script type='text/javascript'>document.location='https://www.nouveta.tech/revenuesure/'</script>";
 }
 ?>
 <!DOCTYPE html>
@@ -315,13 +315,11 @@ if(isset($_SESSION["PhoneNumber"])){
                                                 </label>
                                                 <div class="col-md-4">
                                                     <select class="form-control" name="select" v-model="parkingPlace">
-                                                        <option value="">Select...</option>
-                                                        <option value="Category 1">Zone 1</option>
-                                                        <option value="Category 2">Zone 2</option>
-                                                        <option value="Category 3">Zone 3</option>
-                                                        <option value="Category 4">Zone 4</option>
-                                                        <option value="Category 5">Zone 5</option>
-                                                        <option value="Category 6">Zone 6</option>
+                                                        <option value="Butere">Butere</option>
+                                                        <option value="Khwisero">Khwisero</option>
+                                                        <option value="Navakholo">Navakholo</option>
+                                                        <option value="Shinyulu">Shinyulu</option>
+                                                        <option value="MumiasWest">Mumias West</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -498,7 +496,7 @@ if(isset($_SESSION["PhoneNumber"])){
 
                 var app = this
                 var formData = new FormData;
-                url = 'http://localhost/revenuesure/api/index.php?function=ParkingDaily'
+                url = 'https://www.nouveta.tech/revenuesure/api/index.php?function=ParkingDaily'
                 formData.append('function', 'ParkingDaily');
                 formData.append('RegNo', app.regNo);
                 formData.append('parking_place',app.parkingPlace),
@@ -515,10 +513,8 @@ if(isset($_SESSION["PhoneNumber"])){
                 });
                 axios.post(url, formData).then(response=>{
 
-                    /*if(!alert('Check your phone to complete the payments!'))
-                    {window.location.reload();}*/
+                    {window.location.href="https://www.nouveta.tech/revenuesure/revenue/return.php";}
                     console.log(response.data)
-
                 }).catch(function (error) {
                     console.log(error);
                 });
@@ -527,7 +523,7 @@ if(isset($_SESSION["PhoneNumber"])){
 
                 var app = this
                 var formData = new FormData;
-                url = 'http://localhost/revenuesure/api/index.php?function=cash'
+                url = 'https://www.nouveta.tech/revenuesure/api/index.php?function=cash'
                 formData.append('function', 'cash');
                 formData.append('RegNo', app.regNo);
                 formData.append('parking_place',app.parkingPlace),
@@ -545,7 +541,7 @@ if(isset($_SESSION["PhoneNumber"])){
                 axios.post(url, formData).then(response=>{
 
                     if(!alert('payments confirmed!'))
-                    {window.location.href="http://localhost/revenuesure/revenue/return.php";}
+                    {window.location.href="https://www.nouveta.tech/revenuesure/revenue/return.php";}
                     console.log(response.data)
 
                 }).catch(function (error) {

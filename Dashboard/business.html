@@ -1078,7 +1078,7 @@
                 var app = this
                 var formData = new FormData;
                 formData.append('function', 'Businesspermit');
-                axios.post('http://revenuesure.nouveta.co.ke/api/index.php?function=Businesspermit')
+                axios.post('https://www.nouveta.tech/api/index.php?function=Businesspermit')
                     .then(function (response) {
                         app.dailyIncome = response.data
                     })
@@ -1090,7 +1090,7 @@
                 var app = this;
                 var formData = new FormData;
                 formData.append('function', 'Businesspermitmonth');
-                axios.post('http://revenuesure.nouveta.co.ke/api/index.php?function=businesspermitmonth')
+                axios.post('https://www.nouveta.tech/api/index.php?function=businesspermitmonth')
                     .then(function (response) {
                         console.log(response)
                         app.monthlyIncome = response.data
